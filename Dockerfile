@@ -15,7 +15,7 @@ ENV SS_LOCAL_ADDR        ""
 ENV SS_UDP               true
 ENV SS_DNS               8.8.4.4
 ENV SS_FASTOPEN          yes
-ENV SS_LOG               /dev/null
+ENV SS_LOG               /dev/stderr
 
 # define default directory
 ENV APP_DIR              /srv/shadowsocks-libev
