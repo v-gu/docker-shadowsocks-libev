@@ -5,7 +5,7 @@
 FROM alpine
 MAINTAINER Vincent Gu <g@v-io.co>
 
-ENV SS_VER 3.0.7
+ENV SS_VER 3.0.8
 
 ENV SS_PASSWORD          password
 ENV SS_METHOD            chacha20
