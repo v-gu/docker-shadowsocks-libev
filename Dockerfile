@@ -5,7 +5,7 @@
 FROM alpine
 MAINTAINER Vincent Gu <g@v-io.co>
 
-ENV SS_VER 3.0.8
+ENV SS_VER 3.1.0
 
 ENV SS_PASSWORD          password
 ENV SS_METHOD            chacha20
@@ -24,8 +24,9 @@ WORKDIR $APP_DIR
 # build shadowsocks-libev
 ENV SS_URL https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$SS_VER/shadowsocks-libev-$SS_VER.tar.gz
 ENV SS_DIR shadowsocks-libev-$SS_VER
-ENV SS_DEP mbedtls libsodium udns libev pcre
-ENV SS_TDEP autoconf build-base libtool linux-headers openssl-dev pcre-dev asciidoc xmlto mbedtls-dev libsodium-dev udns-dev libev-dev curl
+ENV SS_DEP mbedtls libsodium libev c-ares pcre
+ENV SS_TDEP autoconf build-base libtool linux-headers openssl-dev pcre-dev \
+    asciidoc xmlto mbedtls-dev libsodium-dev libev-dev c-ares-dev curl
 RUN set -ex \
     && apk add --update $SS_DEP $SS_TDEP \
     && curl -sSL $SS_URL | tar xz \
