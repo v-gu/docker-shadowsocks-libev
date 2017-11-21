@@ -24,7 +24,7 @@ WORKDIR $APP_DIR
 # build shadowsocks-libev
 ENV SS_URL https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$SS_VER/shadowsocks-libev-$SS_VER.tar.gz
 ENV SS_DIR shadowsocks-libev-$SS_VER
-ENV SS_DEP mbedtls libsodium libev c-ares pcre
+ENV SS_DEP mbedtls libsodium libev c-ares pcre rng-tools
 ENV SS_TDEP autoconf build-base libtool linux-headers openssl-dev pcre-dev \
     asciidoc xmlto mbedtls-dev libsodium-dev libev-dev c-ares-dev curl
 RUN set -ex \
