@@ -2,7 +2,7 @@
 # Dockerfile for shadowsocks-libev
 #
 
-FROM alpine:3.9
+FROM alpine:3.8
 MAINTAINER Vincent Gu <v@vgu.io>
 
 ENV SS_VER 3.3.2
