@@ -1,6 +1,9 @@
 # Change Log
 
 ## bump to new version
+ * shadowsocks-libev: 3.3.2
+
+## bump to new version
  * shadowsocks-libev: 3.3.0
 
 ## bump to new version
